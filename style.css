@@ -1,0 +1,90 @@
+html {
+    font-family: Arial;
+    overflow-x: hidden;
+}
+
+#content-container
+{
+    width: 50vw;
+    background-color: #FF00FF;
+    padding: 20px;
+}
+
+body 
+{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+h1
+{
+    font-size: 40pt;
+    color: red;
+}
+
+
+#entry-container 
+{
+    width: 100%;
+    background-color: blue;
+    /* position: fixed; */
+    display: flex;
+    flex-direction: column;
+}
+
+#entry-container :nth-child(2n + 1) {
+    /* font-size: 40pt; */
+    /* background-color: orange; */
+}
+
+#entry-container :nth-child(2n) {
+    /* position: relative;   */
+    float: right;
+    display: flex;
+    justify-content: right;
+
+    right: 20px;
+    /* width: 80%; */
+    /* font-size: 20pt; */
+    /* background-color: lime; */
+}
+
+#entry-container :last-child 
+{
+    margin-bottom: 0px;
+}
+
+#entry-container div div 
+{
+    background-color: pink;
+    width: 80%;
+}
+
+.entry {
+    width: 100%;
+    margin-bottom: 10px;
+}
+    
+.entry div 
+{
+    background-color: red;
+    padding: 10px;
+}
+
+.entry div h3
+{
+    padding: 0px;
+    margin: 0px;
+}
+
+.entry div img 
+{
+    width: 100%;
+}
+
+.entry div p 
+{
+    padding: 0px;
+    margin: 0px;
+}
