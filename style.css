@@ -1,9 +1,10 @@
 html {
-    font-family: Arial;
+    font-family: Helvetica, sans-serif;
     overflow-x: hidden;
     /* background-color: #101520; */
     background-image: linear-gradient(45deg, #101520, #304060);
     color: white;
+    min-height: 100vh;
 }
 
 #content-container
@@ -37,24 +38,37 @@ h1
     font-weight: bold;
     font-size: 40pt;
     color: #808090;
+    margin: 20px 0;
 }
 
 h2 
 {
     font-weight: bold;
     font-size: 18pt;
+    margin: 0 0 10px 0
 }
 
+h3
+{
+    font-weight: bold;
+    font-size: 18pt;
+    margin-bottom: 10px;
+}
 
 .link 
 {
     display: flex;
-    margin: 40px 0;
+    margin: 20px 0;
 }
 
 .link div
 {
     font-size: 20px;
+    padding: 10px;
+}
+
+.link div h4 
+{
     padding: 10px;
 }
 
@@ -79,6 +93,24 @@ h2
     /* column-gap: 20px; */
 }
 
+/* #entry-container :nth-child(n) 
+{
+    translate: opacity 1s ease-in-out n;
+    opacity: 1;
+} */
+
+@keyframes fade-in
+{
+    from {
+        transform: translate(0, 75px);
+        opacity: 0;
+    }
+    to {
+        transform: translate(0, 0);
+        opacity: 1;
+    }
+}
+
 /* #entry-container :nth-child(2n + 1) {
     font-size: 40pt;
     background-color: orange;
@@ -96,57 +128,143 @@ h2
     margin-bottom: 0px;
 } */
 
-#entry-container .entry div 
+
+#entry-container :nth-child(1)
 {
-    /* background-color: pink; */
-    /* width: 80%; */
-    border-radius: 5px;
+    animation-delay: 0s;
 }
+#entry-container :nth-child(2)
+{
+    animation-delay: 0.2s;
+}
+#entry-container :nth-child(3)
+{
+    animation-delay: 0.4s;
+}
+#entry-container :nth-child(4)
+{
+    animation-delay: 0.6s;
+}
+#entry-container :nth-child(5)
+{
+    animation-delay: 0.8s;
+}
+#entry-container :nth-child(6)
+{
+    animation-delay: 1s;
+}
+#entry-container :nth-child(7)
+{
+    animation-delay: 1.2s;
+}
+#entry-container :nth-child(8)
+{
+    animation-delay: 1.4s;
+}
+#entry-container :nth-child(9)
+{
+    animation-delay: 1.6s;
+}
+
 
 .entry, .link-box {
+
+    opacity: 0;
+    animation-name: fade-in;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.25, 0.65, 0.30, 1);
+
     padding: 20px;
-    /* width: 100% - 200px; */
-    /* margin-bottom: 20px; */
 
-     /* transition-property: background-color; */
-     /* transition-duration: 0.5s; */
+    transition: background-color 0.3s;    
 
-    /* height: 200px; */
     background-color: red;
     margin: 20px;
-    border-radius: 5px;
+    border-radius: 8px;
     background-color: #202020;
 
 }
-/*     
-.entry div, .link-box div 
-{
-    background-color: red;
-    background-color: #202020;
-    padding: 15px;
-    transition: background-color 0.2s;
 
-} */
+.link-box 
+{
+    padding: 20px 40px;
+}
+
+a
+{
+    padding: 10px;
+    /* border: 1px white solid; */
+    justify-content: center;
+}
+
+a div 
+{
+    display: flex;
+    border: 1px white solid;
+    background-color: gray;
+}
+
+.entry h3, .link-box h3
+{
+    text-align: center;
+}
+/* 
 
 .entry:hover
 {
     background-color: #303030;
-}
+} */
 
-
-.entry h3, .entry div h3
-{
-    padding: 0px;
-    margin: 0px;
-}
-
-.entry img, .entry div img 
+.entry img
 {
     width: 100%;
+    margin-bottom: 5px;
 }
 
-.entry p, .entry div p 
+.entry p
 {
-    padding: 0px;
-    margin: 0px;
+    margin-bottom: 20px;
+}
+
+
+.link-button 
+{
+    display: flex;
+    justify-content: center;
+    
+}
+
+.link-button a 
+{
+    display: flex;
+    /* border: 1px white solid; */
+    border: 1px transparent solid;
+    border-radius: 5px;
+    width: fit-content;
+    background-color: #303030;
+    transition: background-color 0.2s, border 0.2s;
+}
+
+.link-button a:hover
+{
+    background-color: #404040;
+    border: 1px white solid;
+}
+
+.link-button a img 
+{
+    width: auto;
+}
+
+.link-button a h4
+{
+    padding: 10px;
+    font-size: 16pt;
+}
+
+
+.link-box div .link-button 
+{
+    margin: 20px;
 }
